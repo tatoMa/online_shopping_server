@@ -9,7 +9,11 @@ const user = new mongoose.Schema({
     type: String,
     required: true
   },
-  img: String
+  img: String,
+  date: {
+    type: Date,
+    default: Date.now
+  }
 })
 
 mongoose.model('user', user)

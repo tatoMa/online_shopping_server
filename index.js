@@ -2,8 +2,8 @@ const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose')
 
-require('./models/user')
-const User = mongoose.model('user')
+// import routes
+const user = require('./routes/user')
 
 const app = express()
 app.use(express.json())
@@ -15,11 +15,10 @@ db.on('error', error => console.error(error))
 db.once('open', () => console.log('DB is connected'))
 
 app.get('/', (req, res) => {
-  //   res.send(User.find())
-  User.find().then(users => {
-    console.log(users)
-  })
+  console.log('running')
 })
+
+app.use('/user', user)
 
 app.listen(process.env.PORT, () => {
   console.log(`server started on ${process.env.PORT}`)
