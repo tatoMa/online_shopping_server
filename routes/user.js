@@ -22,4 +22,21 @@ router.post('/', (req, res) => {
   newUser.save()
 })
 
+router.post('/login/', (req, res) => {
+  //   const { name, email } = req.body
+  User.find({ name: req.body.name }).then(user => {
+    // console.log(user)
+    // res.send(user[0].email + req.body.email)
+    if (JSON.stringify(user[0].email) == JSON.stringify(req.body.email)) {
+      res.send(user)
+    }
+    res.send('cant find user')
+  })
+  //   try {
+
+  //   } catch (error) {
+  //     console.log('didnt found the user')
+  //   }
+})
+
 module.exports = router
