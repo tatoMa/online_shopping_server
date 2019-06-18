@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// create a new schema for user
 const user = new mongoose.Schema({
   name: {
     type: String,
@@ -16,4 +17,5 @@ const user = new mongoose.Schema({
   }
 })
 
+// use user schema for user model
 mongoose.model('user', user)

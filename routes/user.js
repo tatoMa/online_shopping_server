@@ -1,12 +1,14 @@
 const express = require('express')
 const mongoose = require('mongoose')
 
+// init express router
 const router = express.Router()
 
-// import models
+// import mongoose models
 require('../models/user')
 const User = mongoose.model('user')
 
+// routes
 router.get('/', (req, res) => {
   User.find().then(users => {
     res.send(users)
