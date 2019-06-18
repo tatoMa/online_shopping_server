@@ -17,21 +17,29 @@ npm run start
 
 ## Steps of building
 
-- [ ] Project initiate
-  - [ ] Init the project by npm init
-  - [ ] Create index.js
-  - [ ] Config package.json
-  - [ ] Add express, nodemon, mongoose into project
-  - [ ] Setup server running on development enironment
-  - [ ] Test the root route on web browser and postman
-- [ ] Database
-  - [ ] Create a new collection on local MongoDB
-  - [ ] Connect the DB
-  - [ ] Create user models and schema js file
-- [ ] Routes
-  - [ ] Create user route
-  - [ ] create a get route to get all user data from DB
-  - [ ] Create a post route to save a new user into DB
+- [x] Project initiate
+  - [x] Init the project by npm init
+  - [x] Create index.js
+  - [x] Config package.json
+  - [x] Add express, nodemon, mongoose into project
+  - [x] Setup server running on development enironment
+  - [x] Test the root route on web browser and postman
+- [x] Database
+  - [x] Create a new collection on local MongoDB
+  - [x] Connect the DB
+  - [x] Create user models and schema js file
+- [x] Routes
+  - [x] Create user route
+  - [x] create a get route to get all user data from DB
+  - [x] Create a post route to save a new user into DB
+- [x] authorisation
+  - [x] Add Passport.js
+  - [x] Add cors, bcryptjs
+  - [x] Setup Passport
+  - [ ] Add google-oAuth2.0 strategy
+  - [ ] Setup oAuth2.0
+  - [ ] Create callback route
+  - [ ] Store user into DB
 
 ## License
 

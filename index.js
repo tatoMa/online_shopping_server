@@ -2,21 +2,41 @@
 const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose')
+const cors = require('cors')
+const passport = require('passport')
+const path = require('path')
 
-// import routes
+// Passport Config
+require('./config/passport')(passport)
+
+// load routes
 const user = require('./routes/user')
+const auth = require('./routes/auth')
 
 // init express server
 const app = express()
 
-// use json body parser
+// Middlewares
 app.use(express.json())
+app.use(cors())
+app.use(passport.initialize())
+app.use(passport.session())
 
-// mongoDB connection
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true })
-var db = mongoose.connection
-db.on('error', error => console.error(error))
-db.once('open', () => console.log('DB is connected'))
+// mongoose connect
+mongoose
+  .connect(process.env.DB_URI, {
+    useNewUrlParser: true
+  })
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err))
+
+app.get(
+  '/login',
+  passport.authenticate('oauth2', {
+    session: true,
+    successReturnToOrRedirect: '/'
+  })
+)
 
 app.get('/', (req, res) => {
   console.log('running')
@@ -24,6 +44,7 @@ app.get('/', (req, res) => {
 
 // use routes
 app.use('/user', user)
+app.use('/auth', auth)
 
 // listen port
 app.listen(process.env.PORT, () => {

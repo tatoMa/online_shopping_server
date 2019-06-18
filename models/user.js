@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 // create a new schema for user
 const user = new mongoose.Schema({
-  name: {
+  googleID: {
     type: String,
     required: true
   },
@@ -10,7 +10,15 @@ const user = new mongoose.Schema({
     type: String,
     required: true
   },
-  img: String,
+  firstName: {
+    type: String
+  },
+  lastName: {
+    type: String
+  },
+  img: {
+    type: String
+  },
   date: {
     type: Date,
     default: Date.now
