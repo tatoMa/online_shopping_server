@@ -12,6 +12,7 @@ require('./config/passport')(passport)
 // load routes
 const user = require('./routes/user')
 const auth = require('./routes/auth')
+const post = require('./routes/post')
 
 // init express server
 const app = express()
@@ -45,6 +46,7 @@ app.get('/', (req, res) => {
 // use routes
 app.use('/user', user)
 app.use('/auth', auth)
+app.use('/posts', post)
 
 // listen port
 app.listen(process.env.PORT, () => {

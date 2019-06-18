@@ -15,6 +15,12 @@ npm run dev
 npm run start
 ```
 
+## Git
+
+```
+git push -u origin master
+```
+
 ## Steps of building
 
 - [x] Project initiate
@@ -40,7 +46,7 @@ npm run start
   - [x] Setup oAuth2.0
   - [x] Create callback route
   - [x] Store user into DB
-- [ ] Create products
+- [ ] Create products needed files
   - [ ] create product schema
   - [ ] create product model
   - [ ] create product route

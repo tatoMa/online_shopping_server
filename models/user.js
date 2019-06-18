@@ -16,7 +16,7 @@ const user = new mongoose.Schema({
   lastName: {
     type: String
   },
-  img: {
+  image: {
     type: String
   },
   date: {
