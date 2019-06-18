@@ -46,10 +46,13 @@ git push -u origin master
   - [x] Setup oAuth2.0
   - [x] Create callback route
   - [x] Store user into DB
-- [ ] Create products needed files
-  - [ ] create product schema
-  - [ ] create product model
-  - [ ] create product route
+- [x] Create products needed files
+  - [x] create product schema
+  - [x] create product model
+  - [x] create product route
+- [x] Deploy
+  - [x] setup mlab for MongoDB
+  - [x] setup Heroku for deploy
 
 ## License
 
