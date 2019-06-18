@@ -32,14 +32,18 @@ npm run start
   - [x] Create user route
   - [x] create a get route to get all user data from DB
   - [x] Create a post route to save a new user into DB
-- [x] authorisation
+- [x] Authorisation
   - [x] Add Passport.js
   - [x] Add cors, bcryptjs
   - [x] Setup Passport
-  - [ ] Add google-oAuth2.0 strategy
-  - [ ] Setup oAuth2.0
-  - [ ] Create callback route
-  - [ ] Store user into DB
+  - [x] Add google-oAuth2.0 strategy
+  - [x] Setup oAuth2.0
+  - [x] Create callback route
+  - [x] Store user into DB
+- [ ] Create products
+  - [ ] create product schema
+  - [ ] create product model
+  - [ ] create product route
 
 ## License
 
