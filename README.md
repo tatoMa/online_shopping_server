@@ -2,6 +2,8 @@
 
 It is a simple online shopping backend based on Node, express, Passport.js, MongoDB, Mongoose and other libraries.
 
+[Deployed links](https://postandshopping.herokuapp.com)
+
 ## Installation
 
 ```bash
