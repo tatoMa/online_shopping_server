@@ -16,6 +16,9 @@ router.get('/', (req, res) => {
     .then(posts => {
       res.send(posts)
     })
+    .catch(error => {
+      console.error(error)
+    })
 })
 
 // Process Add post

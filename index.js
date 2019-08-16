@@ -49,6 +49,6 @@ app.use('/auth', auth)
 app.use('/posts', post)
 
 // listen port
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 5001, () => {
   console.log(`server started on ${process.env.PORT}`)
 })
